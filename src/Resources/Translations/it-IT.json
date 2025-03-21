@@ -1,0 +1,98 @@
+{
+  "ui": {
+    "common": {
+      "documentation": "Documentazione",
+      "export": "Esporta",
+      "import": "Importa",
+      "reset": "Ripristina",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "delete": "Elimina",
+      "edit": "Modifica",
+      "add": "Aggiungi",
+      "filter": "Filtra",
+      "search": "Cerca",
+      "clear": "Pulisci",
+      "select": "Seleziona",
+      "note": "NOTA",
+      "warning": "ATTENZIONE",
+      "error": "ERRORE",
+      "success": "SUCCESSO",
+      "dismiss": "Ignora",
+      "doNotShowAgain": "Non mostrare più",
+      "moveUp": "Sposta su",
+      "moveDown": "Sposta giù",
+      "enable": "Abilita",
+      "disable": "Disabilita",
+      "feedback": "Feedback",
+      "user": "Utente",
+      "loading": "Caricamento..."
+    },
+    "pages": {
+      "home": {
+        "title": "Home",
+        "disclaimer": "Disclaimer",
+        "disclaimerText": "Questo strumento è stato progettato utilizzando le best practice del Azure Cloud Adoption Framework che aderisce ad alcune regole e consente la personalizzazione completa della convenzione di denominazione. Mentre la maggior parte delle personalizzazioni può essere effettuata nel browser web, questo strumento include anche un'API."
+      },
+      "admin": {
+        "title": "Amministrazione",
+        "password": "Password Amministratore Globale",
+        "configuration": "Configurazione",
+        "log": "Log Amministratore",
+        "enterPassword": "Inserisci la Password Amministratore Globale per configurare il sito Azure Naming Tool.",
+        "versionDetails": "Dettagli Versione",
+        "customization": "Personalizzazione",
+        "security": "Sicurezza",
+        "siteSettings": "Impostazioni Sito"
+      },
+      "instructions": {
+        "title": "Istruzioni",
+        "description": "Questa pagina fornisce istruzioni su come configurare e utilizzare lo strumento Azure Naming Tool."
+      },
+      "configuration": {
+        "title": "Configurazione",
+        "description": "Questa pagina contiene gli input per personalizzare la configurazione dello strumento Azure Naming Tool."
+      },
+      "generate": {
+        "title": "Genera",
+        "description": "Questa pagina genera un nome per il tipo di risorsa selezionato.",
+        "instructions": "Istruzioni",
+        "selectResourceType": "Seleziona il tipo di risorsa desiderato",
+        "reviewGuidelines": "Rivedi le linee guida di denominazione",
+        "selectComponents": "Seleziona le opzioni dei componenti",
+        "generateName": "Genera il nome della risorsa Azure",
+        "viewLog": "Visualizza il log dei nomi generati",
+        "singleResource": "Genera Nome Risorsa Singola",
+        "multipleResources": "Genera Nomi Risorse Multiple"
+      },
+      "reference": {
+        "title": "Riferimento",
+        "description": "Questa pagina mostra un nome di esempio per ogni tipo di risorsa utilizzando i componenti definiti."
+      },
+      "generatedNamesLog": {
+        "title": "Log Nomi Generati",
+        "description": "Questa pagina mostra un registro di tutti i nomi generati utilizzando lo strumento Azure Naming Tool."
+      }
+    },
+    "components": {
+      "resourceTypes": "Tipi di Risorse",
+      "environments": "Ambienti",
+      "locations": "Posizioni",
+      "organizations": "Organizzazioni",
+      "projectsAppsServices": "Progetti/App/Servizi",
+      "functions": "Funzioni",
+      "unitsDepartments": "Unità/Dipartimenti",
+      "customComponents": "Componenti Personalizzati",
+      "delimiters": "Delimitatori",
+      "scopes": {
+        "resourceGroup": "Gruppo di Risorse",
+        "resourceGroupAndRegion": "Gruppo di Risorse e Regione",
+        "region": "Regione",
+        "global": "Globale",
+        "subscription": "Sottoscrizione",
+        "tenant": "Tenant"
+      }
+    }
+  }
+}
