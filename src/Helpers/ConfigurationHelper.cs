@@ -987,7 +987,9 @@ namespace AzureNamingTool.Helpers
             {
                 foreach (dynamic item in items)
                 {
-                    item!.ShortName = lowercase ? item.ShortName.ToLower() : item.ShortName.ToUpper();
+                    if (item != null && item.ShortName != null)
+                    {
+                        item.ShortName = lowercase ? item.ShortName.ToLower() : item.ShortName.ToUpper();
 
                     switch (typeof(T).Name)
                     {

@@ -89,11 +89,12 @@
     private string appversion = ConfigurationHelper.GetAssemblyVersion();
     private string updateurl = "https://github.com/mspnp/AzureNamingTool/wiki/Updating";
 
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync()
     {
         customhomecontent = ConfigurationHelper.GetAppSetting("CustomHomeContent", false);
         logopath = !String.IsNullOrEmpty(ConfigurationHelper.GetAppSetting("CustomLogoPath", false)) ? ConfigurationHelper.GetAppSetting("CustomLogoPath", false) : "images/AzureNamingToolLogo.png";
         toolname = !String.IsNullOrEmpty(ConfigurationHelper.GetAppSetting("CustomToolName", false)) ? ConfigurationHelper.GetAppSetting("CustomToolName", false) : "Azure Naming Tool";
+        return Task.CompletedTask;
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
