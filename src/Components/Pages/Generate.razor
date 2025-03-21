@@ -12,41 +12,41 @@
 @inject IJSRuntime JsRuntime
 @inject IToastService toastService
 
-<PageTitle>Azure Naming Tool - Generate</PageTitle>
+<PageTitle>Azure Naming Tool - Genera</PageTitle>
 <div class="card @theme.ThemeStyle">
     <div class="card-body">
         <div style="float:left;">
             <h1>
-                Generate
+                Genera
             </h1>
         </div>
         <div style="float:right;">
-            <button class="btn btn-secondary" title="Instructions" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Generate", String.Empty, "generateinstructions", false))">
-                <span class="oi oi-document" aria-hidden="true"></span> Documentation
+            <button class="btn btn-secondary" title="Istruzioni" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Genera", String.Empty, "generateinstructions", false))">
+                <span class="oi oi-document" aria-hidden="true"></span> Documentazione
             </button>
         </div>
         <div style="clear:both;"></div>
-        <div class="mb-3">This page generates a name for the selected resource type.</div>
+        <div class="mb-3">Questa pagina genera un nome per il tipo di risorsa selezionato.</div>
         <div class="card mb-3">
             <h5 class="card-header bg-default text-dark">
-                Instructions
+                Istruzioni
             </h5>
             <div class="card card-body @theme.ThemeStyle">
                 <ol>
                     <li>
-                        Select the desired Resource Type / Resource Types
+                        Seleziona il Tipo di Risorsa / Tipi di Risorse desiderati
                     </li>
                     <li>
-                        Review the Naming Guidelines (for single resource type)
+                        Rivedi le Linee Guida per la Denominazione (per tipo di risorsa singola)
                     </li>
                     <li>
-                        Select the component options
+                        Seleziona le opzioni dei componenti
                     </li>
                     <li>
-                        Click <span class="fw-bold">Generate</span> to generate the Azure resource name(s)
+                        Clicca <span class="fw-bold">Genera</span> per generare il nome/i nomi della risorsa Azure
                     </li>
                     <li>
-                        View generated names in the <a href="/generatednameslog">Generated Names Log</a>
+                        Visualizza i nomi generati nel <a href="/generatednameslog">Log Nomi Generati</a>
                     </li>
                 </ol>
             </div>
@@ -65,30 +65,30 @@
                 <div id="generator">
                     <div class="card @theme.ThemeStyle mb-3">
                         <h5 class="card-header text-white bg-secondary">
-                            Generate Mode
+                            Modalità di Generazione
                         </h5>
                         <div class="card card-body @theme.ThemeStyle">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="generateselect" id="singleselect" value="single" checked @onclick="@(e => OnGenerateModeChange("single"))">
                                 <label class="form-check-label" for="singleselect">
-                                    <span class="fw-bold">Generate Single Resouce Type Name</span><br />This option will allow the generation of a single resource type name using the selected components.
+                                    <span class="fw-bold">Genera Nome Risorsa Singola</span><br />Questa opzione consente la generazione di un singolo nome di tipo di risorsa utilizzando i componenti selezionati.
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="generateselect" id="multiselect" value="multi" @onclick="@(e => OnGenerateModeChange("multi"))">
                                 <label class="form-check-label" for="multiselect">
-                                    <span class="fw-bold">Generate Multiple Resource Type Names</span><br />This option will allow the generatation of names for multiple resource types using the selected components. <span class="warning-message">All components will be required (Optional and Excluded Components).</span>
+                                    <span class="fw-bold">Genera Nomi Risorse Multiple</span><br />Questa opzione consente la generazione di nomi per più tipi di risorse utilizzando i componenti selezionati. <span class="warning-message">Tutti i componenti saranno richiesti (Componenti Opzionali ed Esclusi).</span>
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="card @theme.ThemeStyle mb-3 @resourcetypeVisible" id="single">
                         <h5 class="card-header text-white bg-secondary">
-                            Resource Type
+                            Tipo di Risorsa
                         </h5>
                         <div class="card card-body @theme.ThemeStyle">
                             <p>
-                                Select the desired resource type.
+                                Seleziona il tipo di risorsa desiderato.
                             </p>
                             <div class="mb-3">
                                 <div class="input-group flex-nowrap">

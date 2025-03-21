@@ -1,0 +1,137 @@
+@using AzureNamingTool.Models;
+<p>
+    La pagina <span class="fw-bold">Amministrazione</span> consente di configurare le impostazioni di sicurezza, visualizzare i dati della cache e le configurazioni del sito per Azure Naming Tool.
+</p>
+<div class="card">
+    <h5 class="card-header bg-default text-dark">
+        Sezioni/Azioni della Pagina
+    </h5>
+    <div class="card card-body @theme!.ThemeStyle">
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Dettagli Versione</h5>
+                <p>
+                    Questa sezione mostra la versione corrente dell'applicazione e fornisce collegamenti alle note di rilascio. Sono disponibili anche pulsanti per richiedere nuove funzionalità, segnalare bug o avviare discussioni.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Dettagli Amministrazione</h5>
+                <p>
+                    Questa sezione contiene informazioni amministrative e opzioni per la gestione dell'applicazione.
+                </p>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Visualizza Cache</h5>
+                        <p>
+                            Questa funzionalità consente di visualizzare i dati memorizzati nella cache dell'applicazione.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Visualizza Variabili d'Ambiente</h5>
+                        <p>
+                            Questa funzionalità consente di visualizzare le variabili d'ambiente configurate per l'applicazione.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Visualizza Configurazione</h5>
+                        <p>
+                            Questa funzionalità consente di visualizzare la configurazione corrente dell'applicazione.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Personalizzazione</h5>
+                <p>
+                    Questa sezione consente di personalizzare l'aspetto e il comportamento dell'applicazione.
+                </p>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Personalizza Logo</h5>
+                        <p>
+                            Questa funzionalità consente di caricare un logo personalizzato per l'applicazione.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Personalizza Nome Strumento</h5>
+                        <p>
+                            Questa funzionalità consente di personalizzare il nome dello strumento visualizzato nell'applicazione.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Personalizza Contenuto Home</h5>
+                        <p>
+                            Questa funzionalità consente di personalizzare il contenuto della pagina Home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Sicurezza</h5>
+                <p>
+                    Questa sezione consente di configurare le impostazioni di sicurezza dell'applicazione.
+                </p>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Modifica Password Admin Globale</h5>
+                        <p>
+                            Questa funzionalità consente di modificare la password di amministratore globale.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Gestisci Utenti Admin</h5>
+                        <p>
+                            Questa funzionalità consente di gestire gli utenti amministratori dell'applicazione.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Impostazioni Sito</h5>
+                <p>
+                    Questa sezione consente di configurare le impostazioni generali del sito.
+                </p>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Abilita/Disabilita Funzionalità</h5>
+                        <p>
+                            Questa funzionalità consente di abilitare o disabilitare varie funzionalità dell'applicazione.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body @theme!.ThemeStyle">
+                        <h5>Ripristina Configurazione</h5>
+                        <p>
+                            Questa funzionalità consente di ripristinare la configurazione dell'applicazione ai valori predefiniti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public ThemeInfo? theme { get; set; }
+    [Parameter]
+    public bool admin { get; set; } = false;
+}

@@ -1,0 +1,69 @@
+@using AzureNamingTool.Models;
+<p>
+    La pagina <span class="fw-bold">Configurazione</span> contiene tutti i punti dati che compongono la tua convenzione di denominazione. Ci sono 8 componenti standard che possono essere utilizzati per denominare ogni risorsa Azure. I dati all'interno di ciascuno di questi componenti possono essere completamente personalizzati, ad eccezione dei tipi di risorse. Per i tipi di risorse, solo il nome breve, i valori opzionali ed esclusi possono essere aggiornati. È possibile selezionare un delimitatore per separare ciascun componente nei nomi delle risorse. Tuttavia, il delimitatore sarà incluso in un nome di risorsa se quel carattere è consentito. Lo strumento supporta anche la possibilità di definire componenti personalizzati. Ciò consente agli amministratori di creare nuovi componenti per la convenzione di denominazione.
+</p>
+@if (admin)
+{
+    <p>
+        <img style="width:600px;" class="img-fluid" src="Screenshots/ConfigurationAdmin.png" alt="Configurazione" />
+    </p>
+}
+else
+{
+    <p>
+        <img style="width:600px;" class="img-fluid" src="Screenshots/Configuration.png" alt="Configurazione" />
+    </p>
+}
+<div class="card">
+    <h5 class="card-header bg-default text-dark">
+        Sezioni/Azioni della Pagina
+    </h5>
+    <div class="card card-body @theme!.ThemeStyle">
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Configurazione Globale</h5>
+                <p>
+                    Questa sezione consente di esportare e importare la configurazione completa dello strumento. Si consiglia di esportare la configurazione dopo aver definito la convenzione di denominazione come backup.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Componenti</h5>
+                <p>
+                    Questa sezione consente di gestire i componenti delle risorse disponibili per la convenzione di denominazione. È possibile modificare l'ordine dei componenti trascinandoli nella posizione desiderata.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Delimitatori</h5>
+                <p>
+                    Questa sezione consente di gestire i delimitatori disponibili per la convenzione di denominazione. È possibile aggiungere, modificare ed eliminare i delimitatori.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Tipi di Risorse</h5>
+                <p>
+                    Questa sezione consente di gestire i tipi di risorse disponibili per la convenzione di denominazione. È possibile modificare il nome breve, i valori opzionali ed esclusi per ciascun tipo di risorsa.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Componenti Personalizzati</h5>
+                <p>
+                    Questa sezione consente di creare e gestire componenti personalizzati per la convenzione di denominazione. È possibile aggiungere, modificare ed eliminare i componenti personalizzati.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public ThemeInfo? theme { get; set; }
+    [Parameter]
+    public bool admin { get; set; } = false;
+}

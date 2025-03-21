@@ -30,7 +30,7 @@
                 {
                     <div class="w-100">
                         @(
-                            "User: " + currentuser
+                            "Utente: " + currentuser
                             )
                     </div>
                 }
@@ -40,7 +40,7 @@
                 @if (!String.IsNullOrEmpty(feedbackurl))
                 {
                     <div class="ms-3">
-                        <button type="button" class="btn btn-success" @onclick="@(e => ShowFeedback())" title="Want to give feedback?">Feedback</button>
+                        <button type="button" class="btn btn-success" @onclick="@(e => ShowFeedback())" title="Vuoi dare un feedback?">Feedback</button>
                     </div>
                 }
             }
@@ -49,12 +49,12 @@
                 if (currentuser != "System")
                 {
                     <div class="ms-3">
-                        <button type="button" class="btn btn-danger" @onclick="@(e => Logout())" title="Logout" data-bs-toggle="collapse" href="#admin">Logout</button>
+                        <button type="button" class="btn btn-danger" @onclick="@(e => Logout())" title="Esci" data-bs-toggle="collapse" href="#admin">Esci</button>
                     </div>
                 }
             }
             <div class="px-3">
-                <label class="switch" title="App Theme">
+                <label class="switch" title="Tema App">
                     <input type="checkbox" checked="@isdarktheme" @oninput="ThemeChanged">
                     <span class="slider round"></span>
                 </label>
@@ -64,7 +64,7 @@
         <article class="content px-4">
             @if ((admin) && (bool.Parse(ConfigurationHelper.GetAppSetting("DevMode"))))
             {
-                <div class="warning-message">DEV MODE Enabled! This can cause unexpected behavior! Use at your own risk!</div>
+                <div class="warning-message">MODALITÀ SVILUPPO Abilitata! Questo può causare comportamenti imprevisti! Usa a tuo rischio!</div>
             }
             <CascadingValue Value=@theme>
                 @Body
@@ -73,7 +73,7 @@
     </main>
 </div>
 
-<button onclick="topFunction()" type="button" id="btnScrollToTop" class="btn btn-success btn-sm" title="Go to top"><span class="oi oi-arrow-circle-top" style="vertical-align:text-top;"></span> Top</button>
+<button onclick="topFunction()" type="button" id="btnScrollToTop" class="btn btn-success btn-sm" title="Torna in alto"><span class
 @if (PasswordModalOpen)
 {
     <PasswordModal OnClose="@OnPasswordModalClose">

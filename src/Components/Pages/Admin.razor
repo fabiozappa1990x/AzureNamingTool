@@ -17,22 +17,21 @@
 @inject NavigationManager NavigationManager
 @inject ProtectedLocalStorage storage
 
-<PageTitle>Azure Naming Tool - Admin</PageTitle>
+<PageTitle>Azure Naming Tool - Amministrazione</PageTitle>
 <div class="card  @theme.ThemeStyle">
     <div class="card-body">
         <!-- Pop it above the backdrop  -->
         <div class="@theme.ThemeStyle">
             <div style="float:left;">
                 <h1>
-                    Admin
+                    Amministrazione
                 </h1>
             </div>
             @if (admin)
             {
                 <div style="float:right;">
-                    <button class="btn btn-secondary" title="Instructions" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Admin", String.Empty, "adminconfigurationinstructions", admin))">
-                        <span class="oi oi-document" aria-hidden="true"></span> Documentation
-                    </button>
+                    <button class="btn btn-secondary" title="Istruzioni" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Amministrazione", String.Empty, "adminconfigurationinstructions", admin))">
+                        <span class="oi oi-document" aria-hidden="true"></span> Documentazione
                 </div>
             }
             <div style="clear:both;"></div>
@@ -40,27 +39,27 @@
                 @if (!admin)
                 {
                     <p>
-                        Enter the Global Admin Password to configure the Azure Naming Tool site.
+                        Inserisci la Password Amministratore Globale per configurare il sito Azure Naming Tool.
                     </p>
                     <div class="form-group">
-                        <label for="password" style="font-weight:bold">Global Admin Password</label>
+                        <label for="password" style="font-weight:bold">Password Amministratore Globale</label>
                         <input title="Password" class="form-control mb-3" type="password" @onchange="@((ui) => { SetFormValue("login",(string)ui.Value!);})" />
                     </div>
                 }
                 else
                 {
                     <p>
-                        This page allows you to security settings, view cache data, and site configurations for the Azure Naming Tool.
+                        Questa pagina consente di configurare le impostazioni di sicurezza, visualizzare i dati della cache e le configurazioni del sito per Azure Naming Tool.
                     </p>
                     <div class="card mb-3" style="width:auto;">
                         <h5 class="card-header bg-success text-white">
                             <a class="text-decoration-none text-white" data-bs-toggle="collapse" href="#versiondetails" role="button" aria-expanded="false" aria-controls="versiondetails">
-                                <span class="oi oi-chevron-bottom" aria-hidden="true"></span> <span class="fw-bold">Version Details</span>
+                                <span class="oi oi-chevron-bottom" aria-hidden="true"></span> <span class="fw-bold">Dettagli Versione</span>
                             </a>
                         </h5>
                         <div class="collapse card card-body @theme.ThemeStyle" id="versiondetails">
                             <div class="mb-3">
-                                <span class="fw-bold">Current version:</span> @appversion (<a href="@releasenotesurl" target="_blank">Release Notes</a>)
+                                <span class="fw-bold">Versione corrente:</span> @appversion (<a href="@releasenotesurl" target="_blank">Note di rilascio</a>)
                             </div>
                             @if (!String.IsNullOrEmpty(versionalert))
                             {

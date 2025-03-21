@@ -1,0 +1,42 @@
+@using AzureNamingTool.Models;
+<p>
+    La pagina <span class="fw-bold">Riferimento</span> fornisce un esempio di ogni tipo di risorsa Azure utilizzando la convenzione di denominazione definita. Gli esempi di valori non includono componenti di denominazione esclusi. I componenti opzionali sono sempre visualizzati e sono identificati sotto l'esempio. Poiché i nomi univoci sono richiesti solo a ambiti specifici, gli esempi forniti sono generati solo per gli ambiti superiori all'ambito della risorsa: gruppo di risorse, gruppo di risorse e regione, regione, globale, sottoscrizione e tenant.
+</p>
+<p>
+    <img style="width:600px;" class="img-fluid" src="Screenshots/Reference.png" alt="Riferimento" />
+</p>
+<div class="card">
+    <h5 class="card-header bg-default text-dark">
+        Sezioni/Azioni della Pagina
+    </h5>
+    <div class="card card-body @theme!.ThemeStyle">
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Filtro</h5>
+                <p>
+                    Questa sezione consente di filtrare i tipi di risorse visualizzati nella pagina di riferimento. È possibile filtrare per nome o categoria.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Esempi di Nomi</h5>
+                <p>
+                    Questa sezione mostra esempi di nomi per ciascun tipo di risorsa Azure utilizzando la convenzione di denominazione definita. Per ciascun tipo di risorsa, vengono mostrati i seguenti dettagli:
+                </p>
+                <ul>
+                    <li>Nome del tipo di risorsa</li>
+                    <li>Esempio di nome generato</li>
+                    <li>Componenti opzionali (se presenti)</li>
+                    <li>Ambito della risorsa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public ThemeInfo? theme { get; set; }
+    [Parameter]
+    public bool admin { get; set; } = false;
+}
