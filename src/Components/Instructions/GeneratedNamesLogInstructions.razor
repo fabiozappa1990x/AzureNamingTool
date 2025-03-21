@@ -1,29 +1,29 @@
-﻿@using AzureNamingTool.Models;
+@using AzureNamingTool.Models;
 <p>
-    The <span class="fw-bold">Generate Names Log</span> displays all names generated using the Azure Naming Tool, along with the selected components.
+    Il <span class="fw-bold">Registro dei Nomi Generati</span> mostra tutti i nomi generati utilizzando Azure Naming Tool, insieme ai componenti selezionati.
 </p>
 @if (admin)
 {
     <p>
-        <img style="width:600px;" class="img-fluid" src="Screenshots/GeneratedNamesLogAdmin.png" alt="Generated Names Log" />
+        <img style="width:600px;" class="img-fluid" src="Screenshots/GeneratedNamesLogAdmin.png" alt="Registro dei Nomi Generati" />
     </p>
 }
 else
 {
     <p>
-        <img style="width:600px;" class="img-fluid" src="Screenshots/GeneratedNamesLog.png" alt="Generated Names Log" />
+        <img style="width:600px;" class="img-fluid" src="Screenshots/GeneratedNamesLog.png" alt="Registro dei Nomi Generati" />
     </p>
 }
 <div class="card">
     <h5 class="card-header bg-default text-dark">
-        Page Sections/Actions
+        Sezioni/Azioni della Pagina
     </h5>
     <div class="card card-body @theme!.ThemeStyle">
         <div class="card">
             <div class="card-body @theme!.ThemeStyle">
-                <h5>Export Generated Names Log</h5>
+                <h5>Esporta Registro dei Nomi Generati</h5>
                 <p>
-                    This functionality allows the generated names to be exported to a CSV file. The <span class="fw-bold">Filter</span> option can be used to specify the names exported.
+                    Questa funzionalità permette di esportare i nomi generati in un file CSV. L'opzione <span class="fw-bold">Filtro</span> può essere utilizzata per specificare i nomi da esportare.
                 </p>
             </div>
         </div>
@@ -31,9 +31,9 @@ else
         {
             <div class="card">
                 <div class="card-body @theme!.ThemeStyle">
-                    <h5>Purge Generated Names Log</h5>
+                    <h5>Elimina Registro dei Nomi Generati</h5>
                     <p>
-                        This option will delete all <span class="fw-bold">Generated Names Log</span> data. This action cannot be undone!
+                        Questa opzione eliminerà tutti i dati del <span class="fw-bold">Registro dei Nomi Generati</span>. Questa azione non può essere annullata!
                     </p>
                 </div>
             </div>
