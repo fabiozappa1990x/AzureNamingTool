@@ -1,6 +1,6 @@
 @using AzureNamingTool.Models;
 <p>
-    La pagina <span class="fw-bold">Configurazione</span> viene utilizzata per visualizzare/impostare la configurazione dello strumento e dei componenti di denominazione delle risorse. Questa pagina è suddivisa in più sezioni. Ogni sezione mostra la configurazione dei singoli componenti.
+    La pagina <span class="fw-bold">Configurazione</span> contiene tutti i punti dati che compongono la tua convenzione di denominazione. Ci sono 8 componenti standard che possono essere utilizzati per denominare ogni risorsa Azure. I dati all'interno di ciascuno di questi componenti possono essere completamente personalizzati, ad eccezione dei tipi di risorse. Per i tipi di risorse, solo il nome breve, i valori opzionali ed esclusi possono essere aggiornati. È possibile selezionare un delimitatore per separare ciascun componente nei nomi delle risorse. Tuttavia, il delimitatore sarà incluso in un nome di risorsa se quel carattere è consentito. Lo strumento supporta anche la possibilità di definire componenti personalizzati. Ciò consente agli amministratori di creare nuovi componenti per la convenzione di denominazione.
 </p>
 @if (admin)
 {
