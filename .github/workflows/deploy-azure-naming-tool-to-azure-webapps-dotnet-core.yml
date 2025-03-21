@@ -88,7 +88,7 @@ jobs:
   deploy: 
     defaults:
       run:
-        working-directory: ready/AzNamingTool 
+        working-directory: src
     permissions:
       contents: none
     runs-on: ubuntu-latest
