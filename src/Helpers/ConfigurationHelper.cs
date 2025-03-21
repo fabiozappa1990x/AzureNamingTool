@@ -991,7 +991,7 @@ namespace AzureNamingTool.Helpers
                     {
                         item.ShortName = lowercase ? item.ShortName.ToLower() : item.ShortName.ToUpper();
 
-                    switch (typeof(T).Name)
+                        switch (typeof(T).Name)
                     {
                         case nameof(ResourceEnvironment):
                             serviceResponse = await ResourceEnvironmentService.PostItem(item);
