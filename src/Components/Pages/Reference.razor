@@ -9,22 +9,22 @@
 @inject StateContainer state
 @inject IToastService toastService
 
-<PageTitle>Azure Naming Tool - Reference</PageTitle>
+<PageTitle>Azure Naming Tool - Riferimenti</PageTitle>
 
 <div class="card @theme.ThemeStyle">
     <div class="card-body">
         <div style="float:left;">
             <h1>
-                Reference
+                Riferimenti
             </h1>
         </div>
         <div style="float:right;">
-            <button class="btn btn-secondary" title="Instructions" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Reference", String.Empty, "referenceinstructions", false))">
-                <span class="oi oi-document" aria-hidden="true"></span> Documentation
+            <button class="btn btn-secondary" title="Istruzioni" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Riferimenti", String.Empty, "referenceinstructions", false))">
+                <span class="oi oi-document" aria-hidden="true"></span> Documentazione
             </button>
         </div>
         <div style="clear:both;"></div>
-        <div class="mb-3">This page provides an example name for each resource type using the defined configuration.</div>
+        <div class="mb-3">Questa pagina fornisce un nome di esempio per ogni tipo di risorsa utilizzando la configurazione definita.</div>
 
         @if (servicesData.ResourceTypes == null)
         {
@@ -37,15 +37,15 @@
             <div class="card mb-3">
                 <div class="card-header bg-default text-dark">
                     <a class="text-decoration-none text-dark" data-bs-toggle="collapse" style="display:block;font-weight:bold;" href="#jumpto" role="button" aria-expanded="false" aria-controls="jumpto">
-                        <span class="oi oi-chevron-bottom" aria-hidden="true"></span> Jump To
+                        <span class="oi oi-chevron-bottom" aria-hidden="true"></span> Vai a
                     </a>
                 </div>
                 <div class="collapse show card card-body @theme.ThemeStyle" id="jumpto">
                     <p>
-                        Use the filters below to jump to a specifc resource type.
+                        Utilizza i filtri sottostanti per passare a un tipo di risorsa specifico.
                     </p>
                     <select @onchange="OnCategoryChanged" class="form-control @theme.ThemeStyle" aria-label="Select category">
-                        <option value="">Select a resource type provider (OPTIONAL)</option>
+                        <option value="">Seleziona un provider di tipo risorsa (OPZIONALE)</option>
                         @foreach (var category in @categories)
                         {
                             <option value="@category">@category</option>
@@ -53,7 +53,7 @@
                     </select>
 
                     <select @onchange="OnTypeChanged" class="form-control @theme.ThemeStyle" aria-label="Select type">
-                        <option value="">Select a resource type</option>
+                        <option value="">Seleziona un tipo di risorsa</option>
                         @foreach (var type in @ResourceTypeService.GetFilteredResourceTypes(servicesData.ResourceTypes, selectedResourceTypeCategory))
                         {
                             @if (!String.IsNullOrEmpty(type.Property))
@@ -98,7 +98,7 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>
-                                                                    <span class="fw-bold">Example:  @GenerateName(resourcetype, resourcetype.ShortName, resourcetype.StaticValues)</span><a id="@resourcetype.Id"></a>
+                                                                    <span class="fw-bold">Esempio:  @GenerateName(resourcetype, resourcetype.ShortName, resourcetype.StaticValues)</span><a id="@resourcetype.Id"></a>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -110,7 +110,7 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>
-                                                                    <span class="fw-bold">This resource has a lower-level scope and does not require a unique name.</span><a id="@resourcetype.Id"></a>
+                                                                    <span class="fw-bold">Questa risorsa ha un ambito di livello inferiore e non richiede un nome univoco.</span><a id="@resourcetype.Id"></a>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -128,7 +128,7 @@
                                                             {
                                                                 <tr>
                                                                     <td colspan="2" class="table-secondary">
-                                                                        <span class="fw-bold">Components</span>
+                                                                        <span class="fw-bold">Componenti</span>
                                                                     </td>
                                                                 </tr>
                                                                 @foreach (var resourceComponent in servicesData.ResourceComponents!)
@@ -142,7 +142,7 @@
                                                                                 case "ResourceEnvironment":
                                                                                     <tr>
                                                                                         <td class="align-top w-25">
-                                                                                            Environment:
+                                                                                            Ambiente:
                                                                                         </td>
                                                                                         <td style="word-wrap:anywhere;overflow-wrap:anywhere;white-space: normal;" class="align-top">
                                                                                             @servicesData.ResourceEnvironments![0].Name (@servicesData.ResourceEnvironments[0].ShortName)
@@ -152,7 +152,7 @@
                                                                                 case "ResourceInstance":
                                                                                     <tr>
                                                                                         <td class="align-top w-25">
-                                                                                            Instance:
+                                                                                            Istanza:
                                                                                         </td>
                                                                                         <td style="word-wrap:anywhere;white-space: normal;" class="align-top">
                                                                                             1
@@ -162,7 +162,7 @@
                                                                                 case "ResourceLocation":
                                                                                     <tr>
                                                                                         <td class="align-top w-25">
-                                                                                            Location:
+                                                                                            Posizione:
                                                                                         </td>
                                                                                         <td style="word-wrap:anywhere;overflow-wrap:anywhere;white-space: normal;" class="align-top">
                                                                                             @servicesData.ResourceLocations![0].Name (@servicesData.ResourceLocations[0].ShortName)
@@ -192,7 +192,7 @@
                                                                                 case "ResourceType":
                                                                                     <tr>
                                                                                         <td class="align-top w-25">
-                                                                                            Type:
+                                                                                            Tipo:
                                                                                         </td>
                                                                                         <td style="word-wrap:anywhere;overflow-wrap:anywhere;white-space: normal;" class="align-top">
                                                                                             @resourcetype.Resource (@resourcetype.ShortName)

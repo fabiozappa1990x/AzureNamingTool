@@ -1,0 +1,54 @@
+@using AzureNamingTool.Models;
+<p>
+    La pagina <span class="fw-bold">Genera</span> permette agli utenti di generare nomi con le opzioni selezionate. I nomi possono essere generati per un singolo tipo di risorsa o per più tipi di risorse. La pagina <span class="fw-bold">Genera</span> mostrerà i componenti richiesti e opzionali configurati dall'amministratore.
+</p>
+<div class="card mb-3">
+    <h5 class="card-header bg-default text-dark">
+        Modalità di Generazione
+    </h5>
+    <div class="card card-body @theme!.ThemeStyle">
+        <p>
+            Questa sezione permette all'utente di selezionare il tipo o i tipi di risorse desiderati per cui generare il nome. Usa il selettore <span class="fw-bold">Categoria</span> per filtrare l'elenco dei tipi di risorse.
+        </p>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Singolo Tipo di Risorsa</h5>
+                <p>Questa opzione genererà un nome per un singolo tipo di risorsa utilizzando i componenti selezionati. Verranno applicate tutte le linee guida di denominazione.</p>
+                <p>
+                    <img style="width:600px;" class="img-fluid" src="Screenshots/GeneratePage1.png" alt="Genera 1" />
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body @theme!.ThemeStyle">
+                <h5>Tipi di Risorse Multipli</h5>
+                <p>Questa opzione genererà un nome per ciascun tipo di risorsa selezionato utilizzando i componenti selezionati. Verranno applicate tutte le linee guida di denominazione. Tutti i componenti saranno richiesti.</p>
+                <p>
+                    <img style="width:600px;" class="img-fluid" src="Screenshots/GeneratePage2.png" alt="Genera 2" />
+                </p>
+                <p>
+                    Dopo aver selezionato le opzioni desiderate, clicca su <span class="fw-bold">Genera</span> per generare il nome o i nomi delle risorse. L'applicazione tenterà di validare il nome o i nomi generati con le linee guida di denominazione.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mb-3">
+    <h5 class="card-header bg-default text-dark">
+        Nome/i Generato/i
+    </h5>
+    <div class="card card-body @theme.ThemeStyle">
+        <p>
+            Questa sezione mostrerà il nome o i nomi generati, insieme a eventuali note sul processo di validazione. L'elenco dei nomi può essere esportato in un file CSV per l'utilizzo in altre applicazioni.
+        </p>
+        <p>
+            <img style="width:600px;" class="img-fluid" src="Screenshots/GeneratePage3.png" alt="Genera 3" />
+        </p>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public ThemeInfo? theme { get; set; }
+    [Parameter]
+    public bool admin { get; set; } = false;
+}

@@ -17,21 +17,21 @@
 @implements IDisposable
 @inject NavigationManager NavigationManager
 
-<PageTitle>Azure Naming Tool - Admin Log</PageTitle>
+<PageTitle>Azure Naming Tool - Registro Amministratore</PageTitle>
 <div class="card  @theme!.ThemeStyle">
     <div class="card-body">
         <div style="float:left;">
             <h1>
-                Admin Log
+                Registro Amministratore
             </h1>
         </div>
         <div style="float:right;">
-            <button class="btn btn-secondary" title="Instructions" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Admin Log", String.Empty, "adminloginstructions", admin))">
-                <span class="oi oi-document" aria-hidden="true"></span> Documentation
+            <button class="btn btn-secondary" title="Istruzioni" @onclick="@(e => ModalHelper.ShowInformationModal(Modal!, theme, "bg-navcolor", "Registro Amministratore", String.Empty, "adminloginstructions", admin))">
+                <span class="oi oi-document" aria-hidden="true"></span> Documentazione
             </button>
         </div>
         <div style="clear:both;"></div>
-        <div class="mb-3">This page displays a log of Admin/Configuration changes.</div>
+        <div class="mb-3">Questa pagina mostra un registro delle modifiche di Amministrazione/Configurazione.</div>
 
 
         @if (!dataLoaded)
@@ -46,20 +46,20 @@
                 @if (lstAdminLogMessages.Count > 0)
                 {
                     <div class="mb-3">
-                        <button class="btn btn-primary" title="Export Admin Log" @onclick="@(e => OnExportLogClick())">
-                            Export Admin Log
+                        <button class="btn btn-primary" title="Esporta Registro" @onclick="@(e => OnExportLogClick())">
+                            Esporta Registro
                         </button>
                         @if (currentuser == "GlobalAdmin")
                         {
-                            <button class="btn btn-danger mx-1" title="Purge Admin Log" @onclick="@(e => OnPurgeLogClick())">
-                                Purge Admin Log
+                            <button class="btn btn-danger mx-1" title="Elimina Registro" @onclick="@(e => OnPurgeLogClick())">
+                                Elimina Registro
                             </button>
                         }
                     </div>
                     <div class="card mb-3">
                         <div class="card-header bg-default text-dark">
                             <a class="text-decoration-none text-dark" data-bs-toggle="collapse" style="display:block;font-weight:bold;" href="#filter" role="button" aria-expanded="false" aria-controls="filter">
-                                <span class="oi oi-chevron-bottom" aria-hidden="true"></span> Filter Data
+                                <span class="oi oi-chevron-bottom" aria-hidden="true"></span> Filtra Dati
                             </a>
                         </div>
                         <div class="collapse show card card-body @theme.ThemeStyle" id="filter">
@@ -80,7 +80,7 @@
                                         <span class="input-group-text" id="addon-wrapping">
                                             <span class="oi oi-magnifying-glass" id="addon-wrapping"></span>
                                         </span>
-                                        <input class="form-control" type="search" placeholder="Filter by Source, Title, Message"
+                                        <input class="form-control" type="search" placeholder="Filtra per Origine, Titolo, Messaggio"
                                         @bind="filterData"
                                         @bind:event="oninput">
                                     </div>
@@ -88,8 +88,8 @@
                             </div>
                             <div class="form-group row">
                                 <div>
-                                    <button class="btn btn-success" title="Reset" @onclick="@(e => OnResetClick())">
-                                        Reset
+                                    <button class="btn btn-success" title="Reimposta" @onclick="@(e => OnResetClick())">
+                                        Reimposta
                                     </button>
                                 </div>
                             </div>
@@ -99,10 +99,10 @@
                         <table class="table @theme.ThemeStyle">
                             <thead>
                                 <tr>
-                                    <th scope="col">Created On</th>
-                                    <th scope="col">Source</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Message</th>
+                                    <th scope="col">Data Creazione</th>
+                                    <th scope="col">Origine</th>
+                                    <th scope="col">Titolo</th>
+                                    <th scope="col">Messaggio</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -132,7 +132,7 @@
                 else
                 {
                     <p style="font-style:italic">
-                        There are no log items to display.
+                        Non ci sono elementi di log da visualizzare.
                     </p>
                 }
             </div>
